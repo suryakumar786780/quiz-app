@@ -1,0 +1,4 @@
+export const QUESTIONS = 'QUESTIONS';
+export const RANDOM_QUESTIONS = 'RANDOM_QUESTIONS';
+export const ANSWERS = 'ANSWERS';
+export const SELECTED_ANSWERS = 'SELECTED_ANSWERS';

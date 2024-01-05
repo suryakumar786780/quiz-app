@@ -15,7 +15,7 @@ function QuestionCard({ currqus, question, prevfunc, nextfunc }) {
         3: false,
         4: false
     });
-    
+
     const [radioval, setRadioVal] = useState(0);
 
     const changeValue = (e) => {
@@ -61,17 +61,17 @@ function QuestionCard({ currqus, question, prevfunc, nextfunc }) {
     }, [currqus]);
     return (
         <>
-            <Card style={{ width: '60%', margin: 'auto' }} className='shadow-lg p-5'>
-                <Card.Body className='border-bottom-none' style={{ height: '25vh' }}>
+            <Card className='shadow-lg  quscard'>
+                <Card.Body className='border-bottom-none'>
                     <Card.Title>Simple Quiz Application</Card.Title>
                     <Card.Text>
                         Question No. {currqus} of 15
                         <ProgressBar variant="warning" animated now={(16 - currqus) * 6.66} style={{ height: '7px', marginTop: '1rem', marginBottom: '1rem' }} />
                     </Card.Text>
-                    <Card.Text className='fs-5 fw-bold mt-5'>{question.question}</Card.Text>
+                    <Card.Text className='fs-5 fw-bold mt-5 mb-2'>{question.question}</Card.Text>
                 </Card.Body>
-                <ListGroup className="list-group-flush p-2 border-top-0 border-bottom-0">
-                    <Form style={{ width: 'auto', margin: 'auto', padding: "1rem", flex: 'start' }} className=''>
+                <ListGroup className="list-group-flush p-2 border-top-0 border-bottom-0 card-group">
+                    <Form style={{ width: 'auto', margin: 'auto', padding: "1rem", flex: 'start' }}>
                         {
                             question.options.map((e, index) => {
                                 return <div key={index} className="mb-3 checkBox d-flex text-start" >
@@ -95,7 +95,6 @@ function QuestionCard({ currqus, question, prevfunc, nextfunc }) {
                     {
                         <Button variant="outline-success" className='fw-bold' onClick={() => nextBtn(radioval)} >{currqus < 15 ? 'Next' : 'Submit'}</Button>
                     }
-
                 </Card.Body>
             </Card>
         </>

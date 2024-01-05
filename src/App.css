@@ -2,37 +2,73 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quscard {
+  width: 60vw;
+  margin: auto;
+  padding: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.result-top svg {
+  width: 100px;
+}
+
+.result-top .p-1 {
+  font-size: 30px;
+}
+
+.result-top .p-2 {
+  font-size: 25px;
+}
+
+.checkBox:hover {
+  background-color: rgb(189, 188, 188);
+  border-radius: 10px;
+}
+
+.checkBox {
+  cursor: pointer;
+}
+
+.checkBox .form-check-input {
+  cursor: pointer;
+}
+
+.checkBox .form-check-label {
+  cursor: pointer;
+}
+
+.table-responsive-lg {
+  padding: 3rem !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .quscard {
+    width: 90%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 800px) {
+  .quscard {
+    width: 90%;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-text {
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: 475px) {
+  .result-top .p-1 {
+    font-size: 20px;
+  }
+
+  .result-top .p-2 {
+    font-size: 20px;
+  }
+
+  .table-responsive-lg {
+    padding: 0 !important;
   }
 }
